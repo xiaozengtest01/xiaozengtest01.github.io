@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>linux网络管理 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="Xiaozeng,Xiaozeng's Blog">
+  
+  <meta name="description" content="一、安装linux(centos)1、安装centos6.5或7.02、安装ReadHat Enterprise Linux 7.0（RHEL7.0）安装步骤：（1）下载CENTOS6.5 （2）在VirtualBox，选择“设置”-“存储”-“光驱”-选择下载好的镜像文件。 （3）修改VirtualBox中的： 设置——系统——处理器——“扩展特性 启用PAX/NX”    启动虚拟机，安装。">
+<meta name="keywords" content="Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux网络管理">
+<meta property="og:url" content="http://yoursite.com/2018/12/11/Linux网络管理/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一、安装linux(centos)1、安装centos6.5或7.02、安装ReadHat Enterprise Linux 7.0（RHEL7.0）安装步骤：（1）下载CENTOS6.5 （2）在VirtualBox，选择“设置”-“存储”-“光驱”-选择下载好的镜像文件。 （3）修改VirtualBox中的： 设置——系统——处理器——“扩展特性 启用PAX/NX”    启动虚拟机，安装。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-11T14:12:37.353Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="linux网络管理">
+<meta name="twitter:description" content="一、安装linux(centos)1、安装centos6.5或7.02、安装ReadHat Enterprise Linux 7.0（RHEL7.0）安装步骤：（1）下载CENTOS6.5 （2）在VirtualBox，选择“设置”-“存储”-“光驱”-选择下载好的镜像文件。 （3）修改VirtualBox中的： 设置——系统——处理器——“扩展特性 启用PAX/NX”    启动虚拟机，安装。">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">Xiaozeng&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a href="/">
+                        <i class="fa fa-home"></i>
+                        <span>首页</span>
+                    </a>
+                    
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>文档</span>
+                    </a>
+                    
+                    <a href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>Aboutme</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        Xiaozeng&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        To Be A Developer
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="Github" target="_blank" href="//github.com/xiaozengtest01">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-Linux网络管理" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      linux网络管理
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-12-11
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h1 id="一、安装linux-centos"><a href="#一、安装linux-centos" class="headerlink" title="一、安装linux(centos)"></a>一、安装linux(centos)</h1><h3 id="1、安装centos6-5或7-0"><a href="#1、安装centos6-5或7-0" class="headerlink" title="1、安装centos6.5或7.0"></a>1、安装centos6.5或7.0</h3><h3 id="2、安装ReadHat-Enterprise-Linux-7-0（RHEL7-0）"><a href="#2、安装ReadHat-Enterprise-Linux-7-0（RHEL7-0）" class="headerlink" title="2、安装ReadHat Enterprise Linux 7.0（RHEL7.0）"></a>2、安装ReadHat Enterprise Linux 7.0（RHEL7.0）</h3><p>安装步骤：<br>（1）下载CENTOS6.5</p>
+<p>（2）在VirtualBox，选择“设置”-“存储”-“光驱”-选择下载好的镜像文件。</p>
+<p>（3）修改VirtualBox中的：<br> 设置——系统——处理器——“扩展特性 启用PAX/NX”<br>    启动虚拟机，安装。</p>
+<p>（4）安装CENTOS6.5（只能是文本模式）:回车选择第一项安装。</p>
+<p>（5）选择“skip”-“ok”-“re-initalize”</p>
+<p>（6）修改网络，以便能上网</p>
+<p><code>fconfig eth0 up</code> </p>
+<p> <code>vi  /etc/sysconfig/network-scripts/ifcfg-eth0</code><br>修改</p>
+<p>Device=eth0</p>
+<p>HWADDR=默认</p>
+<p>TYPE=Ethernet</p>
+<p>UUID=默认</p>
+<p>ONBOOT=yes</p>
+<p>NM_CONTROLLED=yes</p>
+<p>BOOTPROTO=dhcp</p>
+<p>保存：按esc-:wq!回车</p>
+<p>#init 6</p>
+<p>#ping <a href="http://www.yxnu.edu.cn" target="_blank" rel="noopener">www.yxnu.edu.cn</a></p>
+<p>在windows登录外网</p>
+<p>#ping <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a></p>
+<h4 id="（7）安装GNOME桌面："><a href="#（7）安装GNOME桌面：" class="headerlink" title="（7）安装GNOME桌面："></a>（7）安装GNOME桌面：</h4><pre><code>yum  groupinstall  “Desktop”
+</code></pre><ul>
+<li><p>输入：y     确认下载</p>
+</li>
+<li><p>输入：y     确认安装</p>
+</li>
+<li><p>yum  groupinstall  “X Window System”</p>
+</li>
+<li><p>yum  groupinstall  ”Chinese Support”</p>
+</li>
+<li><p>修改/etc/inittab中的3位5</p>
+</li>
+<li><p>创建用户：先完成第8步。</p>
+</li>
+<li><p>重启</p>
+</li>
+</ul>
+<h2 id="二、远程管理Linux系统"><a href="#二、远程管理Linux系统" class="headerlink" title="二、远程管理Linux系统"></a>二、远程管理Linux系统</h2><p>1、安装telnet服务（不安全：明文传输）</p>
+<h5 id="（1）、查看本机是否安装telnet"><a href="#（1）、查看本机是否安装telnet" class="headerlink" title="（1）、查看本机是否安装telnet"></a>（1）、查看本机是否安装telnet</h5><p>#rpm -qa | grep telnet</p>
+<p>如果什么都不显示。说明你没有安装telnet</p>
+<h5 id="（2）、开始安装"><a href="#（2）、开始安装" class="headerlink" title="（2）、开始安装"></a>（2）、开始安装</h5><p>yum install  xinetd——–安装internet服务</p>
+<p>yum install telnet——–安装telnet客户端（可以不安装）</p>
+<p>yum install telnet-server—安装telnet服务器</p>
+<h5 id="（3）、装好telnet服务之后，默认是不开启服务的，下面我们需要修改文件来开启服务。"><a href="#（3）、装好telnet服务之后，默认是不开启服务的，下面我们需要修改文件来开启服务。" class="headerlink" title="（3）、装好telnet服务之后，默认是不开启服务的，下面我们需要修改文件来开启服务。"></a>（3）、装好telnet服务之后，默认是不开启服务的，下面我们需要修改文件来开启服务。</h5><p>vi  /etc/xinetd.d/telnet    修改 disable = yes 为 disable = no</p>
+<h5 id="（4）、需要激活xinetd服务"><a href="#（4）、需要激活xinetd服务" class="headerlink" title="（4）、需要激活xinetd服务"></a>（4）、需要激活xinetd服务</h5><p>#service  xinetd restart    或者  #/etc/rc.d/init.d/xinetd  restart</p>
+<h5 id="（5）、关闭防火墙：service-iptables-stop"><a href="#（5）、关闭防火墙：service-iptables-stop" class="headerlink" title="（5）、关闭防火墙：service  iptables  stop"></a>（5）、关闭防火墙：service  iptables  stop</h5><h5 id="（6）、在windows上启用telnet：控制面板-程序-程序和功能-打开或关闭windows功能-启用telenet客户端。"><a href="#（6）、在windows上启用telnet：控制面板-程序-程序和功能-打开或关闭windows功能-启用telenet客户端。" class="headerlink" title="（6）、在windows上启用telnet：控制面板-程序-程序和功能-打开或关闭windows功能-启用telenet客户端。"></a>（6）、在windows上启用telnet：控制面板-程序-程序和功能-打开或关闭windows功能-启用telenet客户端。</h5><p>注意：把虚拟机的网络改为“桥接”-修改IP地址。</p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年12月11日 22:12</p>
+        <p>原始链接： <a class="post-url" href="/2018/12/11/Linux网络管理/" title="linux网络管理">http://yoursite.com/2018/12/11/Linux网络管理/</a></p>
+        <footer>
+            <a href="http://yoursite.com">
+                <img src="/images/logo.png" alt="John Doe">
+                John Doe
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/12/11/Linux网络管理/&title=《linux网络管理》 — Hexo&pic=/pictures/1.jpg" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/12/11/Linux网络管理/&title=《linux网络管理》 — Hexo&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/12/11/Linux网络管理/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《linux网络管理》 — Hexo&url=http://yoursite.com/2018/12/11/Linux网络管理/&via=http://yoursite.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/12/11/Linux网络管理/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/12/11/Linux网络管理/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/Linux/" class="color1">Linux</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一、安装linux-centos"><span class="post-toc-text">一、安装linux(centos)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1、安装centos6-5或7-0"><span class="post-toc-text">1、安装centos6.5或7.0</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2、安装ReadHat-Enterprise-Linux-7-0（RHEL7-0）"><span class="post-toc-text">2、安装ReadHat Enterprise Linux 7.0（RHEL7.0）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#（7）安装GNOME桌面："><span class="post-toc-text">（7）安装GNOME桌面：</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#二、远程管理Linux系统"><span class="post-toc-text">二、远程管理Linux系统</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#（1）、查看本机是否安装telnet"><span class="post-toc-text">（1）、查看本机是否安装telnet</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#（2）、开始安装"><span class="post-toc-text">（2）、开始安装</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#（3）、装好telnet服务之后，默认是不开启服务的，下面我们需要修改文件来开启服务。"><span class="post-toc-text">（3）、装好telnet服务之后，默认是不开启服务的，下面我们需要修改文件来开启服务。</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#（4）、需要激活xinetd服务"><span class="post-toc-text">（4）、需要激活xinetd服务</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#（5）、关闭防火墙：service-iptables-stop"><span class="post-toc-text">（5）、关闭防火墙：service  iptables  stop</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#（6）、在windows上启用telnet：控制面板-程序-程序和功能-打开或关闭windows功能-启用telenet客户端。"><span class="post-toc-text">（6）、在windows上启用telnet：控制面板-程序-程序和功能-打开或关闭windows功能-启用telenet客户端。</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2018/12/11/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          Hello World
+        
+      </span>
+    </a>
+  
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2018 John Doe<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://yoursite.com",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/First/">First</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/First/" style="font-size: 10px;">First</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Second/" style="font-size: 10px;">Second</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a href="/">
+                    <i class="fa fa-home"></i><span>首页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/archives">
+                    <i class="fa fa-archive"></i><span>文档</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/about">
+                    <i class="fa fa-user"></i><span>Aboutme</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/First/" style="font-size: 10px;">First</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Second/" style="font-size: 10px;">Second</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
